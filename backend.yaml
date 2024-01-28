@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo
+      tier: backend
+      track: stable
+  template:
+    metadata:
+      labels:
+        app: demo
+        tier: backend
+        track: stable
+    spec:
+      containers:
+        - name: backend
+          image: "xxvladosxx/back_end"
+          ports:
+          - containerPort: 8080
+          env:
+            - name: MONGO_URI
+              value: mongo-service
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    app: demo
+    tier: backend
+    track: stable
+
