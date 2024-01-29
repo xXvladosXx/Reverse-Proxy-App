@@ -38,6 +38,12 @@ Reverse proxy application, using NGINX, Angular, MongoDB, SpringBoot.
 ```
   kubectl create -f front-end.yaml
 ```
+* Deploy MySQL service using `mysql.yaml`
+```
+  kubectl create -f mysql-secrets.yaml
+  kubectl create -f mysql-configMap.yaml
+  kubectl create -f mysql.yaml
+```
 * Check the application
 ```
   minikube service frontend
