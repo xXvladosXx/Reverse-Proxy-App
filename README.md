@@ -1,6 +1,6 @@
 # Reverse-Proxy-App
  
-Reverse proxy application, using NGINX, Angular, MongoDB, SpringBoot.
+Reverse proxy application, using NGINX, Angular, MongoDB, MySQL, SpringBoot.
 
 ## Required tools:
 
