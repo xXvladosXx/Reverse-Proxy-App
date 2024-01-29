@@ -48,6 +48,8 @@ Reverse proxy application, using NGINX, Angular, MongoDB, SpringBoot.
 ```
   minikube service frontend
 ```
+![image](https://github.com/xXvladosXx/Reverse-Proxy-App/assets/63474317/1cca8159-f52c-4053-8c4c-77864c395cdb)
+
   
 ## To find proper data go to /api/users
 
